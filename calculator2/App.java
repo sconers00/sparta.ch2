@@ -1,59 +1,31 @@
 package calculator2;
+//이것은 작업용 백업파일. 파일명과 메인 클래스 명 App으로 바꾸기
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
 
-
 public class App {
     public static void main(String[] args) {
-        double result;
-        String question;
-        int[] arr = new int[3];
-        Scanner sc1 = new Scanner(System.in);
-        Calculator reciever = new Calculator();
-        st:
+        Scanner sc0=new Scanner(System.in);
+        processor process1 = new processor();
+        String select;
         while (true) {
-            //입력기
-            arr = reciever.getinput(arr);
-            if (arr[2] == 0) {  //기호입력 잘못됫을때 재시작용
-                continue;
-            }
-            //계산결과종합기
-            arr = reciever.calculate(arr);
-            if (arr[1] != 0) {
-                result = (double) (arr[0] * arr[2] + arr[1]) / arr[2];
+            System.out.println("무엇을 하시겠습니까?\n 1 : 계산기 사용\n 2 : 계산기록검색\n 그 외 : 종료");
+            select=sc0.nextLine();
+            if(select.equals("1")){
+                process1.process();
+            } else if(select.equals("2")){
+                System.out.println("입력값보다 큰 계산결과들을 불러옵니다 : ");
+                select=sc0.nextLine();
+                Calculator.searchMemory(parseInt(select));
+                //기록검색기
             } else {
-                result = arr[0];
-            }
-            reciever.addResultMemory(result);
-            System.out.println("계산 종료를 원하시면 exit 을 입력해 주십시오.\n계산결과 기록을 보시려면 memory 를 입력해주십시오.\n다른 계산을 원하시면 아무값이나 입력해주십시오.");
-            question = sc1.nextLine();
-            if (question.equals("exit")) {
+                System.out.println("프로그램을 종료합니다.");
                 break;
-            } else if (question.equals("memory")) {
-                while (true) {
-                    System.out.println("작업을 선택하여 주십시오.\n1. 계산 기록 열람\n2. 가장 오래된 기록 제거\n3. 계산기로 돌아가기\n4. 종료");
-                    question = sc1.nextLine();
-                    switch (parseInt(question)) {
-                        case 1:
-                            reciever.getResultMemory();
-                            continue;
-                        case 2:
-                            reciever.deleteFirstResult();
-                            continue;
-                        case 3:
-                            continue st;
-                        case 4:
-                            break st;
-                    }
-                }
-            } else {
-                System.out.println("재기동합니다\n");
             }
         }
     }
 }
-// lv1 완성햇으니 이걸 베이스로 lv2 랑 lv3도 만들것...... 기한은 앞으로 8일
+
