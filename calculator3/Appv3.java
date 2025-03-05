@@ -2,8 +2,7 @@ package calculator3;
 
 import java.util.Scanner;
 
-import static java.lang.Integer.parseInt;
-
+import static java.lang.Double.parseDouble;
 
 public class Appv3 {
     public static void main(String[] args) {
@@ -19,7 +18,7 @@ public class Appv3 {
             } else if (select.equals("2")) {
                 System.out.println("입력값보다 큰 계산결과들을 불러옵니다 : ");
                 select = sc0.nextLine();
-                ArithmeticCalculator.calculate.searchMemory(parseInt(select));
+                ArithmeticCalculator.calculate.searchMemory(parseDouble(select));
                 //기록검색기
             } else {
                 System.out.println("프로그램을 종료합니다.");
@@ -28,6 +27,5 @@ public class Appv3 {
         }
     }
 }
-
 
 

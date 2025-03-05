@@ -1,15 +1,14 @@
 package calculator3;
 
-
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
-
 class processor {
     public void process() {
+        String num1, num2, num3;
         String question;
-        double[] arr;
+        double[] arr=new double[3];
         Scanner sc1 = new Scanner(System.in);
         ArithmeticCalculator receiver = new ArithmeticCalculator();
         ArithmeticCalculator.box reception = receiver.new box();
@@ -17,13 +16,19 @@ class processor {
         st:
         while (true) {
             //입력기
-            arr = reception.Input();
+            Object[] midarr = reception.Input();
+            num1= (String) midarr[0];
+            num2= (String) midarr[1];
+            num3= (String) midarr[2];
+            arr[0]= Double.parseDouble(num1);
+            arr[1]= Double.parseDouble(num2);
+            arr[2]= Double.parseDouble(num3);
             //계산결과종합기
-            switch ((int) arr[2]) {
-                case 1 -> cal.add(arr);
-                case 2 -> cal.sub(arr);
-                case 3 -> cal.mul(arr);
-                case 4 -> cal.div(arr);
+            switch((int) arr[2]){
+                case 1-> cal.add(arr);
+                case 2-> cal.sub(arr);
+                case 3-> cal.mul(arr);
+                case 4-> cal.div(arr);
                 default -> {
                     continue;
                 }

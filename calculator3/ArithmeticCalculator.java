@@ -30,7 +30,7 @@ public class ArithmeticCalculator {
         public abstract double apply(double x, double y);
     }
 
-    //box -> array name
+
     public class calculate {
         private static ArrayList<Double> resultmemory = new ArrayList<>();
 
@@ -87,22 +87,24 @@ public class ArithmeticCalculator {
     }
 
     class box {
-        double[] nums = new double[3];
+        Object[] nums = new Object[3];
+        GenericInput<Double> doubleBox = new GenericInput();
+        GenericInput<String> StringBox = new GenericInput();
         String operator;
 
-        public double[] Input() {
+        public Object[] Input() {
             Scanner sc3 = new Scanner(System.in);
             for (int i = 0; i < 2; i++) {
                 System.out.println((i + 1) + "번째 숫자를 입력해주십시오 : ");
-                nums[i] = Double.parseDouble(sc3.nextLine());
+                nums[i] = doubleBox.Generics();
             }
             System.out.println("연산기호를 입력하십시오 : + - * /");
             operator = sc3.nextLine();
             switch (operator) {
-                case "+" -> nums[2] = 1;
-                case "-" -> nums[2] = 2;
-                case "*" -> nums[2] = 3;
-                case "/" -> nums[2] = 4;
+                case "+" -> nums[2] = "1";
+                case "-" -> nums[2] = "2";
+                case "*" -> nums[2] = "3";
+                case "/" -> nums[2] = "4";
                 default -> {
                     nums[2] = 0;
                     System.out.println("연산기호가 아닙니다.\n프로그램을 재시작합니다.\n");
