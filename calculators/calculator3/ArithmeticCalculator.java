@@ -1,4 +1,4 @@
-package calculator3;
+package calculators.calculator2.calculator3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
