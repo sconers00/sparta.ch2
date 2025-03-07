@@ -1,7 +1,5 @@
 package kiosk.v2;
 
-import kiosk.Menu;
-
 public class Main {
     public static void main(String[] args){
         Menu call = new Menu();
