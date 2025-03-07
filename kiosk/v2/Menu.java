@@ -15,7 +15,7 @@ public class Menu {
             System.out.println("원하시는 메뉴를 골라주세요. 0:종료");
             selector= sc3.nextInt();
             if (selector<5&&selector>0){
-                System.out.println("고르신 메뉴의 가격은 :"+ Double.parseDouble(menuI.price[selector-1]+"입니다."));
+                System.out.println("고르신 메뉴의 가격은 :"+ Double.parseDouble(menuI.price[selector-1])+"입니다.");
             } else if (selector==0){
                 System.out.println("종료합니다.");
                 break;
