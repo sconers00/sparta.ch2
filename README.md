@@ -7,3 +7,4 @@ v3 Refactor : Main -> 구동기
                Kiosk -> 컨트롤러
 v4 Refactor : 메뉴 구성 변경, 탐색기 구조 변경
    add : 메뉴 카테고리
+   add : 오류메시지 추가
