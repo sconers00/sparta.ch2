@@ -26,7 +26,7 @@ public class MenuItem {//메뉴목록들 private 로
                 indexer = 9;//버거 수+음료 수
                 limit = 3;
             }
-            default->{/*잘못된입력용*/}
+            default->{indexer=-2; limit=-2;}
         }
         numIndex[0]=indexer;
         numIndex[1]=limit;
@@ -37,7 +37,7 @@ public class MenuItem {//메뉴목록들 private 로
         String selectedPrice;
         int[] numIndex;
         numIndex=indexer(a);
-        if (numIndex[0] != -1&&b<=numIndex[1]) {
+        if (numIndex[0] > -1&&b<=numIndex[1]&&b>0) {
             selectedPrice = price[numIndex[0] + b-1];//가격반환
         } else
             selectedPrice="0";
@@ -48,8 +48,8 @@ public class MenuItem {//메뉴목록들 private 로
         List<String> menuItems = new ArrayList<>();
         int[] numIndex;
         numIndex=indexer(selection);
-        if (numIndex[1] != -1) {
-            for (int i = numIndex[0]; i < numIndex[0] + numIndex[1]; i++) {//메뉴 생성기
+        if (numIndex[1] > -1) {
+            for (int i = numIndex[0]; i < (numIndex[0] + numIndex[1]); i++) {//메뉴 생성기
                 menuItems.add(name[i]);
                 menuItems.add(spacer[i]);
                 menuItems.add(price[i]);
