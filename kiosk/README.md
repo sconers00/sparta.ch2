@@ -10,8 +10,10 @@ v4   Refactor : 메뉴 구성 변경, 탐색기 구조 변경
      Add : 오류메시지 추가
 
 v4f1 Chore  : 중복코드 주석
-     refactor : 중복코드 종합 및 단일화
+     Refactor : 중복코드 종합 및 단일화
 v5   Update : 캡슐화
 v6   Feature : 장바구니
      Add : 주문목록 및 수량, 합산금액 표기
      Chore : 주석처리한 중복코드 소거
+v7   Feature : 할인적용
+     Refactor : 중복코드 종합 및 단일화, 구조 변경
