@@ -1,4 +1,4 @@
-package calculator2;
+package calculators.calculator2;
 //이것은 작업용 백업파일. 파일명과 메인 클래스 명 App으로 바꾸기
 
 import java.util.Scanner;
