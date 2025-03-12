@@ -10,7 +10,7 @@ public class Kiosk {
         int selector;
         int type;
         Scanner sc = new Scanner(System.in);
-        while (true) {
+        while (true) {//기본화면 및 결제기
             if (menu.orderCheck()) {
                 System.out.println("원하시는 카테고리를 골라주세요.\n 1: 햄버거\n 2: 음료\n 3: 디저트\n 4: 주문\n 5: 주문취소 \n 0: 종료");
             } else {

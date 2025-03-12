@@ -8,7 +8,7 @@ public class MenuItem {//메뉴목록
     private final String[] price = {"4200", "5700", "5300", "6400","2500","2500","3000","2000","3000","3000", "2500", "2000"};
     private final String[] desc = {"데리소스 기반 햄버거", "통새우 패티가 가득", "치킨패티와 핫소스의 만남", "흑밀빵과 향신료의 조화","255ml 콜라캔","255ml 사이다캔","280ml 환타 오랜지맛","300ml 아메리카노","330ml 카페라떼","갓 구운 머핀","감자튀김","소프트 아이스크림 바닐라향"};
 
-    public List<String> dataDoner(int index) {
+    public List<String> dataDoner(int index) {//getter
         List<String> orderList = new ArrayList<>();
         orderList.add(name[index]);
         orderList.add(price[index]);
@@ -78,7 +78,7 @@ public class MenuItem {//메뉴목록
         }
     }
 
-    private void categoryDisplay(int selection) {
+    private void categoryDisplay(int selection) {//카테고리
         switch (selection) {
             case 1 -> System.out.println("Burger Menu");
             case 2 -> System.out.println("Beverage Menu");

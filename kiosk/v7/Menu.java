@@ -12,7 +12,7 @@ public class Menu {
     private int isOrder = 0;
     private int selectMenu; //
 
-    public void menuList(int selectorIn) {
+    public void menuList(int selectorIn) {//메뉴화면창
         while (true) {
             System.out.println("번호 | 이름            | 가격   |설명");
             itemCase.getBoard(selectorIn);
@@ -35,14 +35,14 @@ public class Menu {
         }
     }
 
-    public boolean orderCheck() {
+    public boolean orderCheck() {//장바구니 체크
         if (isOrder > 0)
             return true;
         else
             return false;
     }
 
-    public void orderReset() {
+    public void orderReset() {// 리 셋 버 튼
         isOrder = 0;
         order.resetOrder();
     }
