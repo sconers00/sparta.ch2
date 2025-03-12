@@ -94,7 +94,7 @@ public class Order {//할인율
         System.out.println("주문 총액 : " + sum + " 원");
     }
 
-    public void sumDisplay(int type) {//enud 적용기
+    public void sumDisplay(int type) {//enum 적용기
         switch (type) {
             case 1: {
                 sum = priceAdult(sum);
